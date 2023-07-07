@@ -38,7 +38,7 @@ def take_full_screenshot():
     screenshoot.show()
     root.deiconify()
 
-def box_screenshot():
+def region_screenshot():
     root.iconify()
     global a, box_canva
     cursor_position = tk.Tk()
@@ -108,7 +108,7 @@ canvas_1 = tk.Canvas(root,width=300, height=300,)
 canvas_1.pack()
 
 screenshot_button = tk.Button(text="Take Full Screenshot", command=take_full_screenshot, font=10)
-box_screenshoot_button = tk.Button(text="Capture a region", command=box_screenshot,font=10)
+box_screenshoot_button = tk.Button(text="Capture a region", command=region_screenshot,font=10)
 canvas_1.create_window(150,150,window=screenshot_button)
 canvas_1.create_window(150,200,window=box_screenshoot_button)
 
